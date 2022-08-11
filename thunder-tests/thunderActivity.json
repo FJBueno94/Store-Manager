@@ -22,9 +22,14 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-08-11T20:08:47.598Z",
-    "modified": "2022-08-11T20:42:51.173Z",
+    "modified": "2022-08-11T22:56:28.378Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"manopla do infinito\" \n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -36,7 +41,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-08-11T21:05:10.169Z",
-    "modified": "2022-08-11T21:32:22.812Z",
+    "modified": "2022-08-11T22:29:44.472Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -78,7 +83,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-08-11T21:11:20.657Z",
-    "modified": "2022-08-11T21:11:20.707Z",
+    "modified": "2022-08-11T22:29:21.144Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -95,6 +100,45 @@
     "modified": "2022-08-11T21:30:15.970Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "b5a2a2ad-f426-4804-8069-07018ad2a519",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products?name=manopla do infinito",
+    "url": "http://localhost:3000/products?name=manopla do infinito",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-08-11T22:52:48.571Z",
+    "modified": "2022-08-11T22:53:28.605Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "manopla do infinito",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "ad818e87-3cc6-4f43-8d66-ae64231fb282",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products",
+    "url": "http://localhost:3000/products",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-08-11T22:56:11.422Z",
+    "modified": "2022-08-11T22:56:11.527Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"manopla do infinito\" \n}",
+      "form": []
+    },
     "tests": []
   }
 ]
