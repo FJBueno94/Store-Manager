@@ -4,7 +4,7 @@ const getAll = async () => products.getAll();
 
 const findById = async (id) => {
   const product = await products.findById(id);
-  if (!product.length) {
+  if (product.length === 0) {
     return {
       error: {
         code: 'notFound',

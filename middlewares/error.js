@@ -1,4 +1,5 @@
 const errorMiddleware = (err, _req, res, _next) => {
+  console.error(err);
   const statusByErrorCode = {
     notFound: 404,
   };

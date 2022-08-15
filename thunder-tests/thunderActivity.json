@@ -18,11 +18,11 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:3000/products",
-    "url": "http://localhost:3000/products",
+    "url": "http://localhost:3000/products/2",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-08-11T20:08:47.598Z",
-    "modified": "2022-08-11T22:56:28.378Z",
+    "modified": "2022-08-12T23:39:42.743Z",
     "headers": [],
     "params": [],
     "body": {
@@ -139,6 +139,48 @@
       "raw": "{\n  \"name\": \"manopla do infinito\" \n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "ecd6c3fe-7180-42a7-8247-7eef0f754930",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:3000/products/2",
+    "url": "https://localhost:3000/products/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-08-12T23:39:26.436Z",
+    "modified": "2022-08-12T23:39:26.495Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "939792a2-219b-4d40-8381-8a997baf66ba",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:3000/products/99",
+    "url": "localhost:3000/products/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-08-15T18:42:55.644Z",
+    "modified": "2022-08-15T20:39:36.826Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6e35cba4-016e-4795-9154-dc6728d503c4",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products/99",
+    "url": "localhost:3000/products/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-08-15T18:43:05.386Z",
+    "modified": "2022-08-15T19:43:29.342Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
