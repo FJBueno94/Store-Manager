@@ -5,6 +5,7 @@ require('express-async-errors');
 
 const products = require('./controllers/products');
 const errorMiddleware = require('./middlewares/error');
+const validateProduct = require('./middlewares/validate');
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.get('/', (_request, response) => {
 
 app.get('/products', products.getAll);
 app.get('/products/:id', products.findById);
-app.post('/products', products.createProduct);
+app.post('/products', validateProduct, products.createProduct);
 
 app.use(errorMiddleware);
 

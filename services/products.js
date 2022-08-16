@@ -16,18 +16,6 @@ const findById = async (id) => {
 };
 
 const createProduct = async (name) => products.createProduct(name);
-  // const existingProduct = await products.findByName(name);
-
-  // if (existingProduct) {
-  //   return {
-  //     error: {
-  //       code: 'alreadyExists',
-  //       message: 'Uma pessoa autora já existe com esse nome completo',
-  //     },
-  //   };
-  // }
-//   return products.createProduct(name);
-// };
 
 module.exports = {
   getAll,
