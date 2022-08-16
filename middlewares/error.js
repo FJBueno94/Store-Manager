@@ -1,7 +1,6 @@
 const errorMiddleware = (err, _req, res, _next) => {
   if (err.isJoi) {
     const [code, message] = err.message.split('|');
-    console.log(code, message);
     return res.status(code).json({ message });
   }
 

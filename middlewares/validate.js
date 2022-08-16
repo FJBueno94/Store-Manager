@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-  const valid = Joi.object({
+  const validName = Joi.object({
     name: Joi.string()
       .min(5)
       .required()
@@ -13,12 +13,11 @@ const Joi = require('joi');
 const validateProduct = (req, _res, next) => {
   const name = req.body;
 console.log(name, 'name', req.body);
-  const { error, value } = valid.validate(name);
-  console.log(value, error);
+  const { error } = validName.validate(name);
   if (error) {
     throw error;
   }
-  return next(value);
+  return next();
 };
 
 module.exports = validateProduct;
