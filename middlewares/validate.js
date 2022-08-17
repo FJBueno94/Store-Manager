@@ -10,9 +10,25 @@ const Joi = require('joi');
       }),
   });
 
+const validSale = Joi.object({
+  productId: Joi.number()
+    .integer()
+    .required()
+    .messages({
+      'any.required': '400|"productId" is required',
+    }),
+  quantity: Joi.number()
+    .integer()
+    .required()
+    .greater(0)
+    .messages({
+      'any.required': '400|"quantity" is required',
+      'number.greater': '422|"quantity" must be greater than or equal to 1',
+    }),
+});
+
 const validateProduct = (req, _res, next) => {
   const name = req.body;
-console.log(name, 'name', req.body);
   const { error } = validName.validate(name);
   if (error) {
     throw error;
@@ -20,4 +36,20 @@ console.log(name, 'name', req.body);
   return next();
 };
 
-module.exports = validateProduct;
+const validateSale = (req, _res, next) => {
+  const venda = req.body;
+  venda.map((v) => {
+    const { productId, quantity } = v;
+    const { error } = validSale.validate({ productId, quantity });
+    if (error) {
+      throw error;
+    }
+    return venda;
+  });
+  return next();
+};
+
+module.exports = {
+  validateProduct,
+  validateSale,
+};
