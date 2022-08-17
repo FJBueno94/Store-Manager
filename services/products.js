@@ -25,7 +25,7 @@ const updateProduct = async (id, name) => {
         message: 'Product not found',
       },
     };
-  };
+  }
   await products.updateProduct(id, name);
   return {
     id,
