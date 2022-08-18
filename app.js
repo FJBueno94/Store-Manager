@@ -21,6 +21,7 @@ app.get('/products', products.getAll);
 app.get('/products/:id', products.findById);
 app.post('/products', validate.validateProduct, products.createProduct);
 app.put('/products/:id', validate.validateProduct, products.updateProduct);
+app.delete('/products/:id', products.deleteProduct);
 app.post('/sales', validate.validateSale, sales.createSale);
 
 app.use(errorMiddleware);
