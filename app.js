@@ -23,6 +23,8 @@ app.post('/products', validate.validateProduct, products.createProduct);
 app.put('/products/:id', validate.validateProduct, products.updateProduct);
 app.delete('/products/:id', products.deleteProduct);
 app.post('/sales', validate.validateSale, sales.createSale);
+app.get('/sales', sales.getAllSales);
+app.get('/sales/:id', sales.findByIdSale);
 
 app.use(errorMiddleware);
 

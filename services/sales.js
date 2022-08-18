@@ -22,4 +22,46 @@ const createSale = async (vendas) => {
   return object;
 };
 
-module.exports = { createSale };
+const getAllSales = async () => {
+  const Allsales = await sales.getAllSales();
+  if (Allsales.length === 0) {
+    return {
+      error: { code: 'notFound', message: 'Sale not found' },
+    };
+  }
+  const result = Allsales.map((sale) => {
+    const { date, quantity } = sale;
+    return {
+      saleId: sale.sale_id,
+      date,
+      productId: sale.product_id,
+      quantity,
+    };
+  });
+  return result;
+};
+
+const findByIdSale = async (id) => {
+  const salesProduct = await sales.findByIdSale(id);
+  if (salesProduct.length === 0) {
+    return {
+      error: { code: 'notFound', message: 'Sale not found' },
+    };
+  }
+  const result = salesProduct.map((sale) => {
+    const { date, quantity } = sale;
+    const saleReturn = {
+      date,
+      productId: sale.product_id,
+      quantity,
+    };
+    return saleReturn;
+  });
+  return result;
+};
+
+module.exports = {
+  createSale,
+  getAllSales,
+  findByIdSale,
+};
